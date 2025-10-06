@@ -1,0 +1,1 @@
+# [Lecture 32: Left and right inverses; pseudoinverse](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-33-left-and-right-inverses-pseudoinverse/)
