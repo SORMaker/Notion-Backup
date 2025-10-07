@@ -113,7 +113,7 @@ pub struct Pin<P> {
 
 它包裹一个指针，并且能确保该指针指向的数据不会被移动，例如 `Pin<&mut T>`, `Pin<&T>`, `Pin<Box<T>>` ，都能确保 `T` 不会被移动。
 
-![](https://pic1.zhimg.com/80/v2-de79f3a7a401588d671ecd121916cd90_1440w.png)
+![image.png](../../.assert/Rust-Note/async-await/Pin和Unpin/image1.png)
 
 而 `Unpin` 才是一个特征，它表明一个类型可以随意被移动，那么问题来了，可以被 `Pin` 住的值，它有没有实现什么特征呢？ 答案很出乎意料，可以被 `Pin` 住的值实现的特征是 `!Unpin` ，大家可能之前没有见过，但是它其实很简单，`!` 代表没有实现某个特征的意思，`!Unpin` 说明类型没有实现 `Unpin` 特征，那自然就可以被 `Pin` 了。
 
@@ -239,7 +239,7 @@ fn main() {
 
 下面的图片也可以帮助更好的理解这个过程：
 
-![](https://pica.zhimg.com/80/v2-eaeb33da283dc1063b862d2307821976_1440w.jpg)
+![image.jpg](../../.assert/Rust-Note/async-await/Pin和Unpin/image2.jpg)
 
 # Pin 在实践中的运用
 
@@ -390,7 +390,7 @@ pub fn main() {
 }
 ```
 
-## [将固定住的](https://course.rs/advance/async/pin-unpin.html#%E5%B0%86%E5%9B%BA%E5%AE%9A%E4%BD%8F%E7%9A%84-future-%E5%8F%98%E4%B8%BA-unpin) `Future` [变为 `Unpin`](https://course.rs/advance/async/pin-unpin.html#%E5%B0%86%E5%9B%BA%E5%AE%9A%E4%BD%8F%E7%9A%84-future-%E5%8F%98%E4%B8%BA-unpin)
+## [将固定住的 `Future` 变为 `Unpin`](https://course.rs/advance/async/pin-unpin.html#%E5%B0%86%E5%9B%BA%E5%AE%9A%E4%BD%8F%E7%9A%84-future-%E5%8F%98%E4%B8%BA-unpin)
 
 之前的章节我们有提到 `async` 函数返回的 `Future` 默认就是 `!Unpin` 的。
 
@@ -399,7 +399,7 @@ pub fn main() {
 - `Box::pin`，创建一个 `Pin<Box<T>>`
 - `pin_utils::pin_mut!`，创建一个 `Pin<&mut T>`
 
-固定后获得的 `Pin<Box<T>>` 和 `Pin<&mut T>` 既可以用于 `Future` ，**又会自动实现 `Unpin`**。
+固定后获得的 `Pin<Box<T>>` 和 `Pin<&mut T>` 既可以用于 `Future` ，**又会自动实现** `Unpin`。
 
 ```rust
 use pin_utils::pin_mut;// `pin_utils` 可以在crates.io中找到// 函数的参数是一个`Future`，但是要求该`Future`实现`Unpin`fn execute_unpin_future(x: impl Future<Output = ()> + Unpin) {/* ... */ }
