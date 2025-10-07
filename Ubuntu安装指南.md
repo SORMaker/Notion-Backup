@@ -1,7 +1,7 @@
 # Ubuntu安装指南
 
-[安装Ubuntu](Ubuntu%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97%201f6b9c07c31280c197c9f2d0b6e15aae/%E5%AE%89%E8%A3%85Ubuntu%201f9b9c07c31280f5a516e3ddc78c4be8.md)
+[安装Ubuntu](Ubuntu安装指南/安装Ubuntu.md)
 
-[卸载Ubuntu](Ubuntu%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97%201f6b9c07c31280c197c9f2d0b6e15aae/%E5%8D%B8%E8%BD%BDUbuntu%201f9b9c07c312804e8795c5d51d3c217d.md)
+[卸载Ubuntu](Ubuntu安装指南/卸载Ubuntu.md)
 
-[常见问题](Ubuntu%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97%201f6b9c07c31280c197c9f2d0b6e15aae/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%201f9b9c07c312805da7addc1c0569fa24.md)
+[常见问题](Ubuntu安装指南/常见问题.md)

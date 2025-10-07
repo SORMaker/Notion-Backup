@@ -9,7 +9,7 @@ It contains my home page and some important notes.
 | ✅   | `Xie Zhengyang's Home.md`           | Done           |
 | ⬜️   | `Linear-Algebra-MIT.md`             | Lecture17-Todo |
 | ✅   | `Pointers-in-C.md`                  | Done           |
-| ⬜️   | `GitHub极简工作流.md`                 | Todo           |
-| ⬜️   | `Rust-Note.md`                      | Todo           |
-| ⬜️   | `Ubuntu安装指南.md`                  | Todo           |
-| ⬜️   | `WSL-Windows-Subsystem-For-Linux.md`| Todo           |
+| ✅   | `GitHub极简工作流.md`                 | Todo           |
+| ✅   | `Rust-Note.md`                      | Todo           |
+| ✅   | `Ubuntu安装指南.md`                  | Todo           |
+| ✅   | `WSL-Windows-Subsystem-For-Linux.md`| Todo           |

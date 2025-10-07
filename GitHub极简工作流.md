@@ -1,70 +1,70 @@
 # GitHub极简工作流
 
-![Git工作流_page-0001.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0001.jpg)
+![Git工作流_page-0001.jpg](.assert/GitHub极简工作流/Git工作流_page-0001.jpg)
 
 第一步我们先从远端（Remote，也就是GitHub）拉去仓库到本地。
 
-![Git工作流_page-0002.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0002.jpg)
+![Git工作流_page-0002.jpg](.assert/GitHub极简工作流/Git工作流_page-0002.jpg)
 
 之后，我们首先在本地创建一个新的分支my-feature,这样做的好处是我们在本地分支上修改我们的代码，而不会“污染”main分支的代码。
 
-![Git工作流_page-0003.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0003.jpg)
+![Git工作流_page-0003.jpg](.assert/GitHub极简工作流/Git工作流_page-0003.jpg)
 
 完成修改之后，我们可以使用`git diff` 命令来查看我们的修改内容。
 
-![Git工作流_page-0004.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0004.jpg)
+![Git工作流_page-0004.jpg](.assert/GitHub极简工作流/Git工作流_page-0004.jpg)
 
 之后，我们使用`git add <changed_file>` 命令，将修改过的文件添加到暂存区。
 
-![Git工作流_page-0005.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0005.jpg)
+![Git工作流_page-0005.jpg](.assert/GitHub极简工作流/Git工作流_page-0005.jpg)
 
 然后执行`git commit` 命令提交我们的修改。
 
-![Git工作流_page-0006.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0006.jpg)
+![Git工作流_page-0006.jpg](.assert/GitHub极简工作流/Git工作流_page-0006.jpg)
 
 之后使用`git push origin my-feature` 命令`push` 我们的修改到远端仓库，这时候我们的远端仓库会出现一个新的分支`my-feature`。
 
-![Git工作流_page-0007.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0007.jpg)
+![Git工作流_page-0007.jpg](.assert/GitHub极简工作流/Git工作流_page-0007.jpg)
 
 正常情况下，如果是个人项目推送上去之后直接merge就可以了。但是稍微大一点的项目，就会出现，在你推送上去的时候，main分支会有一个新的update，这个时候你需要自己在本地合并update和你的my-feature，检查没有问题之后再重新推送。
 
-![Git工作流_page-0008.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0008.jpg)
+![Git工作流_page-0008.jpg](.assert/GitHub极简工作流/Git工作流_page-0008.jpg)
 
 所以，你要先在本地使用`git checkout main` 命令切换到本地的main分支。
 
-![Git工作流_page-0009.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0009.jpg)
+![Git工作流_page-0009.jpg](.assert/GitHub极简工作流/Git工作流_page-0009.jpg)
 
 然后使用`git pull origin main` 重新拉取update到本地。这个时候本地的main分支已经到最新。
 
-![Git工作流_page-0010.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0010.jpg)
+![Git工作流_page-0010.jpg](.assert/GitHub极简工作流/Git工作流_page-0010.jpg)
 
 之后使用`git checkout my-feature` 切换回自己的my-feature分支。
 
-![Git工作流_page-0011.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0011.jpg)
+![Git工作流_page-0011.jpg](.assert/GitHub极简工作流/Git工作流_page-0011.jpg)
 
 然后使用`git rebase main` 命令，将update分支同步到my-feature上，并合并冲突项。
 
-![Git工作流_page-0012.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0012.jpg)
+![Git工作流_page-0012.jpg](.assert/GitHub极简工作流/Git工作流_page-0012.jpg)
 
 修改完成之后，我们要重新push到我们远端的my-feature上。注意这时候我们要使用`git push -f origin my-feature` ，原因是我们在本地的f-commit之前，重新同步了update分支，而远端的my-feature分支没有同步，如果不加`-f` 会出现推送不成功。
 
-![Git工作流_page-0013.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0013.jpg)
+![Git工作流_page-0013.jpg](.assert/GitHub极简工作流/Git工作流_page-0013.jpg)
 
 完成这些之后，我们就可以向仓库所有者提出`pull request` 。
 
-![Git工作流_page-0014.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0014.jpg)
+![Git工作流_page-0014.jpg](.assert/GitHub极简工作流/Git工作流_page-0014.jpg)
 
 之后，仓库所有者会进行`squash and merge`。为什么要执行这个操作而不是直接merge，这是因为在一个正规项目里，可能会有很多分支请求merge，但是我们为了让main分支上的更新尽可能的简约，需要对很多分支的请求进行合并。完成合并之后，main分支上会出现一个新的分支update2。
 
-![Git工作流_page-0015.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0015.jpg)
+![Git工作流_page-0015.jpg](.assert/GitHub极简工作流/Git工作流_page-0015.jpg)
 
 之后，我们需要删除掉远端的my-feature分支，然后在本地使用`git checkout main` 切换回`main` 分支。
 
-![Git工作流_page-0016.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0016.jpg)
+![Git工作流_page-0016.jpg](.assert/GitHub极简工作流/Git工作流_page-0016.jpg)
 
 之后使用`git branch -D my-feature` 删除掉local git中的my-feature分支。
 
-![Git工作流_page-0017.jpg](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0017.jpg)
+![Git工作流_page-0017.jpg](.assert/GitHub极简工作流/Git工作流_page-0017.jpg)
 
 最后的最后，我们重新使用`git pull origin master` 同步远端的最新main分支到本地。
 
@@ -112,7 +112,7 @@ The key's randomart image is:
 
 里面的内容是
 
-![image.png](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/image.png)
+![image.png](.assert/GitHub极简工作流/image1.png)
 
 然后我们复制里面的全部内容。
 
@@ -120,11 +120,11 @@ The key's randomart image is:
 
 找到settings→SSH and GPG keys.
 
-![image.png](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/image%201.png)
+![image.png](.assert/GitHub极简工作流/image2.png)
 
 点击New SSH Key。
 
-![image.png](GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81%20273b9c07c312807b8545e299eb3ae73e/image%202.png)
+![image.png](.assert/GitHub极简工作流/image3.png)
 
 填入一个title，便于告诉自己这个ssh key是用在哪台设备上的。比如：Windows-ssh-key
 

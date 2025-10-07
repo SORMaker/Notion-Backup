@@ -156,7 +156,7 @@ pin_mut!(t1, t2);
 
 当时没有展开讲，相信大家也有疑惑，下面我们来一起看看。
 
-## [跟 `Unpin` 和](https://course.rs/advance/async/multi-futures-simultaneous.html#%E8%B7%9F-unpin-%E5%92%8C-fusedfuture-%E8%BF%9B%E8%A1%8C%E4%BA%A4%E4%BA%92) `FusedFuture` [进行交互](https://course.rs/advance/async/multi-futures-simultaneous.html#%E8%B7%9F-unpin-%E5%92%8C-fusedfuture-%E8%BF%9B%E8%A1%8C%E4%BA%A4%E4%BA%92)
+## [跟 `Unpin` 和 `FusedFuture` 进行交互](https://course.rs/advance/async/multi-futures-simultaneous.html#%E8%B7%9F-unpin-%E5%92%8C-fusedfuture-%E8%BF%9B%E8%A1%8C%E4%BA%A4%E4%BA%92)
 
 首先，`.fuse()` 方法可以让 `Future` 实现 `FusedFuture` 特征，而`pin_mut!` 宏会为 `Future` 实现 `Unpin` 特征，这两个特征恰恰是使用 `select` 所必须的：
 
