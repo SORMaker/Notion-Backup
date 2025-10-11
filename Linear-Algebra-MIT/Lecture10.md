@@ -1,6 +1,6 @@
 # [Lecture 10: The four fundamental subspaces](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-10-the-four-fundamental-subspaces/)
 
-# **四个基本子空间**
+# 四个基本子空间
 
 现有 $m×n$ 矩阵 $A$ ，已知 $rank(A)=r,r≤\min(n,m)$ ，则有：
 
@@ -13,7 +13,7 @@
 - 行空间(Row Space)\
     $C(A^T)∈Rn,dimC(A^T)=r$
     
-- 左零空间()\
+- 左零空间(Left Null Space)\
     $N(A^T)∈Rm,dimN(A^T)=m−r$
     
 
@@ -23,7 +23,7 @@
 
 事实上，除了先转置再如法炮制的法子以外，对于行空间和左零空间，我们还有更便捷的求解方法。
 
-## **行空间**
+## 行空间
 
 假如我们换个角度思考，直接来看 A 的行向量组，消元得到：
 
@@ -33,7 +33,7 @@ $$A=\begin{bmatrix}1&2&3&1\\1&1&2&1\\1&2&3&1\end{bmatrix}\xrightarrow{消元}\be
 
 > 这里的R就是第七讲提到的简化行阶梯形式。
 
-## **左零空间**
+## 左零空间
 
 对于左零空间，有 $A^Ty=0$→$(A^Ty)^T=0^T$→$y^TA=0$，因此得名。
 
@@ -49,7 +49,7 @@ $$EA=\begin{bmatrix}-1&2&0\\0&1&-1\\-1&0&1\end{bmatrix}⋅\begin{bmatrix}1&2&3&1
 
 很明显，式中E的最后一行对A的行做线性组合后（行视角：-1个行1+0个行2+1个行3），得到 $R$ 的最后一行，即 0向量，也就是 $y^TA=0$。另一方面，$E$ 的第三行对应的行向量就是矩阵 $A$ 的左零空间的基，维数是1。
 
-## **矩阵空间**
+## 矩阵空间
 
 不只是向量可以构建出空间，万物皆可构造出空间，只要满足加法和数乘的封闭性即可。
 

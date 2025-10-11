@@ -4,7 +4,7 @@
 
 给定一个有向图：4节点，5条边
 
-![](https://r00tk1ts.github.io/2022/05/14/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0(%E5%8D%81%E4%BA%8C)%E2%80%94%E2%80%94%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C/2022-05-14-16-56-35.png)
+![Image1](../.assert/Linear-Algebra-MIT/Lecture12/Image1.png)
 
 可以用如下方式来抽象描述：
 $$\begin{array}{c|cccc}&node_1&node_2&node_3&node_4\\\hline edge_1&-1&1&0&0\\edge_2&0&-1&1&0\\edge_3&-1&0&1&0\\edge_4&-1&0&0&1\\edge_5&&0&-1&1\end{array}$$
