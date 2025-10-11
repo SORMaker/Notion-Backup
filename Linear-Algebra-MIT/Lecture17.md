@@ -15,13 +15,13 @@ $$
 将标准正交向量组中的 $q₁, q₂, ..., qₙ$ 组成的矩阵 $Q$ 被称为正交矩阵：
 
 $$
-Q = [q_1 \space q_2 \space q_3 \space ... \space q_n]
+Q = \left[\begin{matrix}{}q_1&q_2&q_3&\dots&q_n\end{matrix}\right]
 $$
 
 显然，正交矩阵 $Q$ 具有一个良好的性质：
 
 $$
-Q^TQ = \left[\begin{matrix}{}q_1\\q_2\\q_3\\\dots\\q_n\end{matrix}\right]\left[\begin{matrix}{}q_1&q_2&q_3&\dots&q_n\end{matrix}\right]=\left[\begin{matrix}{}1&0&\dots&0&0\\0&1&\dots&0&0\\\dots&\dots&\dots&\dots&\dots\\0&0&\dots&1&0\\0&0&\dots&0&1\end{matrix}\right]=I
+Q^TQ = \left[\begin{matrix}{}q_1\\q_2\\q_3\\\cdots\\q_n\end{matrix}\right]\left[\begin{matrix}{}q_1&q_2&q_3&\cdots&q_n\end{matrix}\right]=\left[\begin{matrix}{}1&0&\cdots&0&0\\0&1&\cdots&0&0\\\vdots&\vdots&\ddots&\vdots&\vdots\\0&0&\cdots&1&0\\0&0&\cdots&0&1\end{matrix}\right]=I
 $$
 
 ### 正交矩阵
@@ -117,7 +117,7 @@ $$
 B = b - \frac{A^Tb}{A^TA}A
 $$
 
-式子里A^Tb和A^TA都是内积标量值。得到A,B之后，第二步就是做标准化：
+式子里$A^Tb$和$A^TA$都是内积标量值。得到A,B之后，第二步就是做标准化：
 
 $$
 q_1 = \frac{A}{||A||}, q_2 = \frac{B}{||B||}
@@ -143,7 +143,7 @@ $$
 
 ### 示例
 
-有 $a=\left[\begin{matrix}1\\1\\1\end{matrix}\right]$, $\left[\begin{matrix}1\\0\\2\end{matrix}\right]$，求标准正交矩阵 $Q$。
+有 $a = \left[\begin{matrix}1\\1\\1\end{matrix}\right]$, $b = \left[\begin{matrix}1\\0\\2\end{matrix}\right]$，求标准正交矩阵 $Q$。
 
 解：
 
@@ -166,7 +166,7 @@ $$
 类似地，Gram-Schmidt正交化可以表示为 $A=QR$，其中 $Q$ 为标准正交矩阵，$R$ 是上三角矩阵：
 
 $$
-[a_1 \space a_2] = [q_1 \space q_2]\begin{bmatrix}a_1^Tq_1 & a_2^Tq_1 \\ 0 & a_2^Tq_2\end{bmatrix}
+A = Q\begin{bmatrix}a_1^Tq_1 & a_2^Tq_1 \\ 0 & a_2^Tq_2\end{bmatrix}
 $$
 
 注意到 $R$ 矩阵左下角为0（因为$a₁⊥q₂$）。推广到高维时，$R$  矩阵的下三角部分均为0，这是因为在Gram-Schmidt正交化过程中，后构造的向量总是垂直于之前的所有向量。
