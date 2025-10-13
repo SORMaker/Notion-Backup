@@ -7,7 +7,7 @@ It contains my home page and some important notes.
 | 状态  | 文件路径                             | 备注            |
 | :--: | -----------------------             | -------------- |
 | ✅   | `Xie Zhengyang's Home.md`           | Done           |
-| ⬜️   | `Linear-Algebra-MIT.md`             | Lecture23-Todo |
+| ⬜️   | `Linear-Algebra-MIT.md`             | Lecture31-Todo |
 | ✅   | `Pointers-in-C.md`                  | Done           |
 | ✅   | `GitHub极简工作流.md`                 | Todo           |
 | ✅   | `Rust-Note.md`                      | Todo           |
