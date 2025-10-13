@@ -4,23 +4,23 @@
 
 ---
 
-[Lecture 1：The geometry of linear quations](Linear-Algebra-MIT/Lecture1.md)
+[Lecture 1：The geometry of linear quations](Linear-Algebra-MIT/Lecture01.md)
 
-[Lecture 2：Elimination with matrices](Linear-Algebra-MIT/Lecture2.md)
+[Lecture 2：Elimination with matrices](Linear-Algebra-MIT/Lecture02.md)
 
-[Lecture 3：Multiplication and inverse matrices](Linear-Algebra-MIT/Lecture3.md)
+[Lecture 3：Multiplication and inverse matrices](Linear-Algebra-MIT/Lecture03.md)
 
-[Lecture 4：Factorization into A = LU](Linear-Algebra-MIT/Lecture4.md)
+[Lecture 4：Factorization into A = LU](Linear-Algebra-MIT/Lecture04.md)
 
-[Lecture 5：Spaces R^n](Linear-Algebra-MIT/Lecture5.md)   
+[Lecture 5：Spaces R^n](Linear-Algebra-MIT/Lecture05.md)   
 
-[Lecture 6： Column Space and Null space](Linear-Algebra-MIT/Lecture6.md)
+[Lecture 6： Column Space and Null space](Linear-Algebra-MIT/Lecture06.md)
 
-[Lecture 7： Solving Ax = 0 Pivot Variables, Special Solutions](Linear-Algebra-MIT/Lecture7.md)
+[Lecture 7： Solving Ax = 0 Pivot Variables, Special Solutions](Linear-Algebra-MIT/Lecture07.md)
 
-[Lecture 8：Solving Ax b Row Reduced Form R](Linear-Algebra-MIT/Lecture8.md)
+[Lecture 8：Solving Ax b Row Reduced Form R](Linear-Algebra-MIT/Lecture08.md)
 
-[Lecture 9: Independence, basis, and dimension](Linear-Algebra-MIT/Lecture9.md)
+[Lecture 9: Independence, basis, and dimension](Linear-Algebra-MIT/Lecture09.md)
 
 [Lecture 10: The four fundamental subspaces](Linear-Algebra-MIT/Lecture10.md)
 
