@@ -31,7 +31,7 @@ $\begin{aligned}&\left[\begin{array}{cc}2 & -1 \\-1 & 2\end{array}\right]\left[\
 
 所谓的 **row picture**，跟我们在中学时的画图一样，在平面直角坐标系$XOY$中做出$2 x-y=0$和$-x+2 y = 3$的图像（也就是两条直线），他们的交点也就是我们要找的$(x,y)$。
 
-![image.png](../.assert/Linear-Algebra-MIT/Lecture1/image.png)
+![image.png](../.assert/Linear-Algebra-MIT/Lecture01/image.png)
 
 ### Column Picture (向量的角度)
 

@@ -14,9 +14,9 @@
 
 比如我们随便在直线 L 上取一个向量 a，在平面 P 上取一个向量 b。此时向量 a+b 方向就会夹在直线 L 与平面 P 之间，脱离了 $P \cup L$ 的范围。所以 $P \cup L$ 无法构成子空间
 
-![LA_6_3.png](../.assert/Linear-Algebra-MIT/Lecture6/LA_6_3.png)
+![LA_6_3.png](../.assert/Linear-Algebra-MIT/Lecture06/LA_6_3.png)
 
-![LA_6_4.png](../.assert/Linear-Algebra-MIT/Lecture6/LA_6_4.png)
+![LA_6_4.png](../.assert/Linear-Algebra-MIT/Lecture06/LA_6_4.png)
 
 ### $P \cap L$ 空间
 
