@@ -1,6 +1,6 @@
 # [Lecture 27: Positive definite matrices and minima](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-27-positive-definite-matrices-and-minima/)
 
-# **正定矩阵和最小值**
+# 正定矩阵和最小值
 
 何为正定矩阵，首先正定矩阵一定是实对称矩阵，先从2阶方阵入手，下面给出正定矩阵的4种判定法：
 
@@ -13,7 +13,7 @@
 
 此外，正定矩阵都得是正定阵。
 
-## **二阶正定矩阵的探讨**
+## 二阶正定矩阵的探讨
 
 对于矩阵$A=\begin{bmatrix}2&6\\6&?\end{bmatrix}$，根据上述判定法的行列式判定法，我们知道，这里的？处只要填上一个大于18的数，该矩阵就是正定的。
 
@@ -21,13 +21,17 @@
 
 除了通过特征值、行列式和主元来判定，还可以用第四种判别式法来展开探讨：
 
-$x^TAx=\begin{bmatrix}x_1&x_2\end{bmatrix}\begin{bmatrix}2&6\\6&18\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}=2x_1^2+12x_1x_2+18x_2^2$
+$$
+x^TAx=\begin{bmatrix}x_1&x_2\end{bmatrix}\begin{bmatrix}2&6\\6&18\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}=2x_1^2+12x_1x_2+18x_2^2
+$$
 
-实际上这里的2,12,18就分别代表了a,2b和c。这是一个标准的二次型，没有线性项，那么根据判别式法，对于$2x_1^2+12x_1x_2+18x_2^2$是否恒大于0呢？显然不是，因为在某种取值中，其结果可能恰好为0。
+实际上这里的2,12,18就分别代表了a,2b和c。这是一个标准的二次型，没有线性项，那么根据判别式法，对于 $2x_1^2+12x_1x_2+18x_2^2$ 是否恒大于0呢？显然不是，因为在某种取值中，其结果可能恰好为0。
 
 再来看看A不是正定的情况：
 
-$x^TAx=\begin{bmatrix}x_1&x_2\end{bmatrix}\begin{bmatrix}2&6\\6&7\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}=2x_1^2+12x_1x_2+7x_2^2$
+$$
+x^TAx=\begin{bmatrix}x_1&x_2\end{bmatrix}\begin{bmatrix}2&6\\6&7\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}=2x_1^2+12x_1x_2+7x_2^2
+$$
 
 这一二次型呈现在坐标轴上是一个马鞍面：
 
@@ -37,7 +41,9 @@ $x^TAx=\begin{bmatrix}x_1&x_2\end{bmatrix}\begin{bmatrix}2&6\\6&7\end{bmatrix}\b
 
 而对于正定矩阵来说：
 
-$x^TAx=\begin{bmatrix}x_1&x_2\end{bmatrix}\begin{bmatrix}2&6\\6&20\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}=2x_1^2+12x_1x_2+20x_2^2$
+$$
+x^TAx=\begin{bmatrix}x_1&x_2\end{bmatrix}\begin{bmatrix}2&6\\6&20\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}=2x_1^2+12x_1x_2+20x_2^2
+$$
 
 它是一个开口始终朝上的二次型曲面，其最小值在原点取到，切面类似于二次函数曲线：
 
@@ -48,19 +54,19 @@ $x^TAx=\begin{bmatrix}x_1&x_2\end{bmatrix}\begin{bmatrix}2&6\\6&20\end{bmatrix}\
 将$f(x,y)$配方：$f(x,y)=2(x+3y)^2+2y^2$，显然，如果A非正定，那么配方剩下的$y^2$前的系数一定为负，而如果我们用$f=1$这个平面来截取这个曲线，则得到的一定是个椭圆。
 
 > 实际上配方法反映到线性代数里就是消元：
-> 
-> 
 > ![2024-03-09-17-52-42.png](../.assert/Linear-Algebra-MIT/Lecture27/2024-03-09-17-52-42.png)
 > 
 
-## **到n阶的推广**
+## 到n阶的推广
 
 微积分中我们求二阶偏导数极值时的$f_{xx}$，$f_{yy}$与$f_{xy}^2$之间的关系也可以反映到矩阵的正定判定上，即二阶导数矩阵：
 
-$\begin{bmatrix}f_{xx}&f_{xy}\\f_{yx}&f_{yy}\end{bmatrix}$
+$$
+\begin{bmatrix}f_{xx}&f_{xy}\\f_{yx}&f_{yy}\end{bmatrix}
+$$
 
 这里主对角线的两个元素都是某一个方向上的n阶导数(上例n=2)，为了存在极小值，它们必须为正。而函数的求导顺序不会改变结果，所以沿着对角线的元素天然是对称的(如上例的$f_{xy}=f_{yx}$)。此外，微积分中求极小值时还要求$f_{xx}∗f_{yy}>f_{xy}^2$，而这一点正与判定该矩阵是否为正定阵的方法不谋而合。
 
-![](https://r00tk1ts.github.io/2024/03/09/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0(%E4%BA%8C%E5%8D%81%E5%85%AB)%E2%80%94%E2%80%94%E6%AD%A3%E5%AE%9A%E7%9F%A9%E9%98%B5%E5%92%8C%E6%9C%80%E5%B0%8F%E5%80%BC/2024-03-09-18-16-53.png)
+![2024-03-09-18-16-53.png](../.assert/Linear-Algebra-MIT/Lecture27/2024-03-09-18-16-53.png)
 
 这一判断也可以推广到n维方阵。
