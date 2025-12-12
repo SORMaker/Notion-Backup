@@ -6,7 +6,7 @@ It contains my home page and some important notes.
 
 | 状态  | 文件路径                             | 备注            |
 | :--: | -----------------------             | -------------- |
-| ✅   | [`Xie Zhengyang's Home.md`](XieZhengyang's-Home.md)           | Done           |
+| ✅   | [`Xie Zhengyang's Home.md`](XieZhengyang.md)           | Done           |
 | ⬜️   | [`Linear-Algebra-MIT.md`](Linear-Algebra-MIT.md)             | Lecture31-Todo |
 | ✅   | [`Pointers-in-C.md`](Poniters-in-C.md)                  | Done           |
 | ✅   | [`GitHub极简工作流.md`](GitHub极简工作流.md)                 | Done           |
