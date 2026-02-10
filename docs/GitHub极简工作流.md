@@ -140,3 +140,71 @@ ssh -T git@github.com
 # 如果看到下面的内容，代表添加成功。
 Hi [your name]! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+
+## 本地与远程仓库同步
+
+### Step1
+
+确保本地代码已提交。
+
+在合并前，确保本地所有的修改都已经`commit`了。
+
+```bash
+git add .
+git commit -m "Initial commit"
+```
+
+### Step2
+
+将本地分支重命名为main。
+
+Github现在默认主分支是`main`，而有些可能是`master`。
+
+```bash
+git branch -M main
+```
+
+### Step3
+
+将远程仓库地址添加为本地远程仓库。
+
+```bash
+git remote add origin <你的GitHub仓库URL>
+```
+
+### Step4
+
+拉取远程代码并合并。
+
+因为远程仓库可能有`LICENSE`和`.gitignore`，如果本地没有的话，直接`pull`会报错。
+
+```bash
+git pull origin main --allow-unrelated-histories --no-rebase
+```
+
+**可能发生的情况：**
+
+1. **自动成功：** 如果你本地没有同名文件，git 会自动把 GitHub 上的 LICENSE 和 .gitignore 下载下来并生成一个新的合并 commit。
+2. **冲突 (Conflict)：** 如果你本地也写了一个 `.gitignore` 文件，git 会提示冲突。你需要打开 `.gitignore`，手动保留你需要的内容，然后再次 `git add .gitignore` 和 `git commit`。
+
+### Step5
+
+最后提交。
+
+```bash
+git push -u origin main
+```
+
+`-u`是`--set-upstream`的缩写。
+
+它的作用是：绑定，记住默认路线。
+
+如果你**不加** `-u`： 每次你想推送或拉取代码，你都必须写全：
+
+- `git push origin main`
+- `git pull origin main`
+
+如果你**加了** `-u`（只需要加一次）： 以后你就可以直接输入简短的命令，Git 就会自动去刚才绑定的那个远程分支：
+
+- **`git push`** (Git 知道默认推送到 `origin main`)
+- **`git pull`** (Git 知道默认从 `origin main` 拉取)
