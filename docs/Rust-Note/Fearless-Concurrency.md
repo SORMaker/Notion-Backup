@@ -6,8 +6,8 @@
 
 [线程间的消息传递](Fearless-Concurrency/线程间的消息传递.md)
 
-[线程同步：锁、Condvar、信号量](Fearless-Concurrency/线程同步:锁、Condvar、信号量.md)
+[线程同步：锁、Condvar、信号量](Fearless-Concurrency/线程同步-锁、Condvar、信号量.md)
 
-[线程同步：Atomic原子类型与内存顺序](Fearless-Concurrency/线程同步:Atomic原子类型与内存顺序.md)
+[线程同步：Atomic原子类型与内存顺序](Fearless-Concurrency/线程同步-Atomic原子类型与内存顺序.md)
 
 [基于Send和Sync的线程安全](Fearless-Concurrency/基于Send和Sync的线程安全.md)
